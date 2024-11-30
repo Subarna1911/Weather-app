@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Alegreya", serif;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* Section Padding */
+.section-padding {
+    padding: 20px;
+}
+
+/* Card Styling */
+.card {
+    overflow: hidden;
+    background-color: #e5ecf4;
+    width: 100%;
+    max-width: 400px; 
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Search Section Styling */
+.search {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.search #textField {
+    border: none;
+    outline: none;
+    padding: 1rem;
+    border-radius: 20px;
+    padding-right: 40px;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #fff;
+    border: 2px solid #ddd; 
+}
+
+.search button {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.search i {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Weather Details Styling */
+.weather .city {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.weather__details__value {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.weather__img {
+    width: 150px;
+    height: 150px;
+    background-size: contain;
+    background-position: center;
+    padding: 16px;
+    margin: 20px 0;
+}
+
+.weather__details__img {
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-position: left;
+}
+
+.weather__details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem; 
+    margin-top: 20px;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+        max-width: none;
+        padding: 15px;
+    }
+
+    .search #textField {
+        width: 100%;
+        padding: 0.8rem;
+    }
+
+    .search i {
+        font-size: 20px;
+    }
+
+    .weather__details {
+        gap: 1.5rem; 
+    }
+
+    .weather__details__value {
+        font-size: 12px;
+    }
+}
+
+/* For Very Small Screens (e.g., Phones in Portrait Mode) */
+@media (max-width: 480px) {
+    .card {
+        width: 95%; 
+    }
+
+    .weather__details {
+        gap: 1rem;
+    }
+
+    .weather__details__value {
+        font-size: 11px; 
+    }
+}

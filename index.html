@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Myweather app</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>My weather app</h1>
+            <div class="search">
+                <input type="text" name="" id="textField" class="city-input" placeholder="enter the city">
+                <button onclick="getWeather()"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="weather section-padding">
+                <h4 class="city">New York</h4>
+                <img class="weather__img" src="thunder.png" alt="img">
+                <h2 class="degree">18°C</h2>
+                <p class="message">Good Morning</p>
+            </div>
+            <div class="weather__details section-padding">
+                <div class="col1">
+                    <img class="weather__details__img" src="hmi.png" alt="">
+                    <p class="weather__details__title">Humidity</p>
+                    <p class="weather__details__value" id="humidity">88%</p>
+                </div>
+
+                <div class="col2">
+                    <img class="weather__details__img" src="wind.png" alt="">
+                    <p class="weather__details__title">wind</p>
+                    <p class="weather__details__value" id="windSpeed">5.14 m/s </p>
+                </div>
+
+                <div class="col3">
+                    <img class="weather__details__img" src="rainning.png" alt="">
+                    <p class="weather__details__title">condition</p>
+                    <p class="weather__details__value" id="condition">broken clouds</p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
