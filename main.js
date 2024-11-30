@@ -1,10 +1,15 @@
 async function getWeather() {
     const city = document.getElementById("textField").value;
 
+
     if (!city) {
         alert("Please enter a city name.");
         return; 
     }
+
+    const weatherSection = document.querySelector(".weather");
+    weatherSection.style.display = "block";
+    
     const apiKey = "441b80aef74b7b5788016f43fb9c6dbc";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
@@ -22,11 +27,11 @@ async function getWeather() {
 
         if (data.cod === 200) {
             if (data.weather && data.weather[0]) {
-                document.querySelector(".city").innerText = data.name;
-                document.querySelector(".degree").innerText = `${data.main.temp}°C`;
-                document.querySelector(".message").innerText = getWeatherMessage(data.weather[0].main);
-                document.querySelector(".weather__img").src = getWeatherImage(data.weather[0].main);
-                document.querySelector("#humidity").innerText = `${data.main.humidity}%`;
+                document.querySelector(".city").innerText      = data.name;
+                document.querySelector(".degree").innerText    = `${data.main.temp}°C`;
+                document.querySelector(".message").innerText   = getWeatherMessage(data.weather[0].main);
+                document.querySelector(".weather__img").src    = getWeatherImage(data.weather[0].main);
+                document.querySelector("#humidity").innerText  = `${data.main.humidity}%`;
                 document.querySelector("#windSpeed").innerText = `${data.wind.speed} m/s`;
                 document.querySelector("#condition").innerText = data.weather[0].description;
             } else {
@@ -40,6 +45,8 @@ async function getWeather() {
         console.error("Error fetching weather data:", error);
         alert("Something went wrong! Please try again later.");
     }
+  
+  
 }
 
 function getWeatherMessage(weatherCondition) {

@@ -81,6 +81,10 @@ body, html {
 }
 
 /* Weather Details Styling */
+
+.weather{
+    display: none;
+}
 .weather .city {
     font-size: 20px;
     font-weight: bold;
