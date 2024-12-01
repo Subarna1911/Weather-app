@@ -115,10 +115,32 @@ body, html {
 
 .weather__details {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     gap: 2rem; 
     margin-top: 20px;
+}
+
+.suggestions {
+    position: absolute;
+    top:60px;
+    width: 100%;
+    background-color: white;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    z-index: 2000;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+}
+
+.suggestion-item {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
 }
 
 /* Responsive Design for Mobile */
