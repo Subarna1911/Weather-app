@@ -31,7 +31,7 @@ body, html {
 
 /* Card Styling */
 .card {
-    overflow: hidden;
+    overflow: visible;
     background-color: #e5ecf4;
     width: 100%;
     max-width: 400px; 
